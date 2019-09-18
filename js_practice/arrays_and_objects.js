@@ -1,29 +1,11 @@
 /* Lab: write the code requested by lines marked //TODO  */
+console.log('Lab 4. Please write the code requested at the //TODO markers.')
 
-
-/* a. Use this JavaScript object of exchange rates relative to Euros.
-The properties are currency symbols, the values are the exchange rates.
-Data source: http://fixer.io/
-* */
-
-var rates = {
-    "AUD": 1.5417,
-    "BGN": 1.9558,
-    "BRL": 3.8959,
-    "CAD": 1.5194
-};
-
-// TODO add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
-// TODO if you had 100 Euros, calculate the equivalent value in Australian Dollars (AUD)
-// TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
-//    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
-
-
-/* b. Use this JavaScript object. This represents the current position of the International Space Station
+/* a. Use this JavaScript object. This represents the current position of the International Space Station
 at 1pm on January 12th 2018, fetched from http://api.open-notify.org/iss-now.json.
  */
 
-var iss_location = {
+let iss_location = {
   "timestamp": 1515784140,
   "iss_position":
     {
@@ -39,19 +21,42 @@ var iss_location = {
 
 
 
+/* b. Use this JavaScript object of exchange rates relative to Euros.
+The properties are currency symbols, the values are the exchange rates.
+Data source: http://fixer.io/
+* */
+
+
+let rates = {
+    "AUD": 1.5417,
+    "BGN": 1.9558,
+    "BRL": 3.8959,
+    "CAD": 1.5194
+};
+
+// TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
+// TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate 
+//      the equivalent value in Australian Dollars (AUD)
+// TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
+//    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
+
+
+
+
 /* c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
  */
 
-var cats_and_owners = [
-  { name: 'Bill Clinton', cat : 'Socks' },
-  { name: 'Gary Oldman', cat : 'Soymilk' },
-  { name: 'Katy Perry', cat : 'Kitty Purry' },
-  { name: 'Snoop Dogg', cat : 'Miles Davis' }
+let cats_and_owners = [
+  { name: "Bill Clinton", cat: "Socks" },
+  { name: "Gary Oldman", cat: "Soymilk" },
+  { name: "Katy Perry", cat: "Kitty Purry" },
+  { name: "Snoop Dogg", cat: "Miles Davis" }
 ];
 
 // TODO print Gary Oldman's cat's name
-// TODO Taylor Swift's cat is called 'Meredith'. Add this data to the array.
+// TODO Taylor Swift's cat is called"Meredith'. Write code to add this data to the array.
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
+
 
 
 
@@ -66,7 +71,7 @@ Source http://api.nobelprize.org/v1/prize.json?year=2017
 // TODO write code to count the total number of laureates from 2017. (have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.)
 
 
-var nobel_prize_winners_2017 = {
+let nobel_prize_winners_2017 = {
   "prizes":[
     {
       "year":"2017",
