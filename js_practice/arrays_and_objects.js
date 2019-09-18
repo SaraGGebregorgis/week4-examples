@@ -1,4 +1,6 @@
-/* Lab: write the code requested by lines marked //TODO  */
+/* Lab: write the code requested by lines marked //TODO
+You should NOT modify any of the code that's here already. Add the code requested.   */
+
 console.log('Lab 4. Please write the code requested at the //TODO markers.')
 
 /* a. Use this JavaScript object. This represents the current position of the International Space Station
@@ -54,7 +56,7 @@ let cats_and_owners = [
 ];
 
 // TODO print Gary Oldman's cat's name
-// TODO Taylor Swift's cat is called"Meredith'. Write code to add this data to the array.
+// TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 
 
@@ -68,7 +70,8 @@ Source http://api.nobelprize.org/v1/prize.json?year=2017
 // TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
 // TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
 // TODO write code to print the total number of prize categories
-// TODO write code to count the total number of laureates from 2017. (have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.)
+// TODO write code to count the total number of laureates from 2017. 
+//   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
 
 
 let nobel_prize_winners_2017 = {
