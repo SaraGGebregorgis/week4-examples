@@ -15,7 +15,7 @@ let iss_location = {
       "longitude": "100.5363"
     },
   "message": "success"
-};
+}
 
 // TODO Extract the latitude value, and log it to the console.
 // TODO Extract the longitude value, and log it to the console.
@@ -34,7 +34,7 @@ let rates = {
     "BGN": 1.9558,
     "BRL": 3.8959,
     "CAD": 1.5194
-};
+}
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate 
@@ -53,7 +53,7 @@ let cats_and_owners = [
   { name: "Gary Oldman", cat: "Soymilk" },
   { name: "Katy Perry", cat: "Kitty Purry" },
   { name: "Snoop Dogg", cat: "Miles Davis" }
-];
+]
 
 // TODO print Gary Oldman's cat's name
 // TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
@@ -197,4 +197,4 @@ let nobel_prize_winners_2017 = {
       ]
     }
   ]
-};
+}
