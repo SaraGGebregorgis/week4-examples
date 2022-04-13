@@ -1,6 +1,5 @@
 console.log('hello world')
 
-
 let name = 'clara'
 let todayTemp = 71
 
@@ -112,3 +111,19 @@ animals.forEach(function(element, index){
 //     console.log('Animal element index)
 //   })
   
+
+// create an object - contains properties
+// properties are name: value pairs
+let user = { username: 'Zoe', password: 'kittens'}
+
+console.log(user.username)  // Zoe
+console.log(user['username'])  // Zoe
+
+
+let furnitureColors = { couch: 'green', table: 'blue', chair: 'red'}
+
+// looping over an object
+for (let furniture in furnitureColors) {
+    let color = furnitureColors[furniture]
+    console.log(`The ${furniture} is the color ${color}`)
+}
