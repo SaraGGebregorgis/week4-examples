@@ -18,8 +18,12 @@ let iss_location = {
 }
 
 // TODO Extract the latitude value, and log it to the console.
-// TODO Extract the longitude value, and log it to the console.
+let latitude = iss_location.iss_position.latitude;
+console.log('Latitude:', latitude)
 
+// TODO Extract the longitude value, and log it to the console.
+let longitude = iss_location.iss_position.longitude;
+console.log('Longitude:', longitude)
 
 
 
@@ -37,8 +41,13 @@ let rates = {
 }
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
+rates.CHF = 1.1787
+
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate 
 //      the equivalent value in Australian Dollars (AUD)
+let euros = 100
+let audValue = euros * rates.AUD
+console.log('Equivalent value in AUD:', audValue)
 
 
 
@@ -53,11 +62,23 @@ let cats_and_owners = [
 ]
 
 // TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
+cats_and_owners.push({ name: "Taylor Swift", cat: "Meredith" })
+
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 //   Each line should have a message like "Snoop Dogg's cat is called Miles Davis"
-// TODO print Gary Oldman's cat's name by reading the data in the appropriate array index, using [] notation
-// TODO print Gary Oldman's cat's name by looping over the array until you find the object with name = "Gary Oldman"
+cats_and_owners.forEach(owner => {
+    console.log(`${owner.name}'s cat is called ${owner.cat}`);
+  })
 
+// TODO print Gary Oldman's cat's name by reading the data in the appropriate array index, using [] notation
+console.log("Gary Oldman's cat is called:", cats_and_owners[1].cat)
+
+// TODO print Gary Oldman's cat's name by looping over the array until you find the object with name = "Gary Oldman"
+cats_and_owners.forEach(owner => {
+    if (owner.name === "Gary Oldman") {
+      console.log("Gary Oldman's cat is called:", owner.cat);
+    }
+  })
 
 
 /* d. Use the following JSON object, describing the Nobel Prize winners in 2017.
@@ -65,12 +86,31 @@ Source http://api.nobelprize.org/v1/prize.json?year=2017
 * */
 
 // TODO print the full name of the Literature Nobel laureate.
-// TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
-// TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
-// TODO write code to print the total number of prize categories
-// TODO write code to count the total number of laureates from 2017. 
-//   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
+let literatureLaureate = nobel_prize_winners_2017.prizes.find(prize => prize.category === "literature").laureates[0];
+console.log('Literature Nobel laureate:', literatureLaureate.firstname, literatureLaureate.surname);
 
+// TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
+let physicsLaureates = nobel_prize_winners_2017.prizes.find(prize => prize.category === "physics").laureates;
+physicsLaureates.forEach(laureate => {
+  console.log('Physics laureate ID:', laureate.id);
+})
+
+// TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
+nobel_prize_winners_2017.prizes.forEach(prize => {
+    console.log('Prize category:', prize.category);
+  })
+
+  // TODO write code to print the total number of prize categories
+  let totalCategories = nobel_prize_winners_2017.prizes.length;
+  console.log('Total number of prize categories:', totalCategories)
+
+  // TODO write code to count the total number of laureates from 2017. 
+  let totalLaureates = 0;
+  nobel_prize_winners_2017.prizes.forEach(prize => {
+    totalLaureates += prize.laureates.length;
+  })
+  //   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
+  console.log('Total number of laureates from 2017:', totalLaureates)
 
 let nobel_prize_winners_2017 = {
   "prizes":[
