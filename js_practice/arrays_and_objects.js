@@ -18,11 +18,11 @@ let iss_location = {
 }
 
 // TODO Extract the latitude value, and log it to the console.
-let latitude = iss_location.iss_position.latitude;
+let latitude = iss_location.iss_position.latitude
 console.log('Latitude:', latitude)
 
 // TODO Extract the longitude value, and log it to the console.
-let longitude = iss_location.iss_position.longitude;
+let longitude = iss_location.iss_position.longitude
 console.log('Longitude:', longitude)
 
 
@@ -67,7 +67,7 @@ cats_and_owners.push({ name: "Taylor Swift", cat: "Meredith" })
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 //   Each line should have a message like "Snoop Dogg's cat is called Miles Davis"
 cats_and_owners.forEach(owner => {
-    console.log(`${owner.name}'s cat is called ${owner.cat}`);
+    console.log(`${owner.name}'s cat is called ${owner.cat}`)
   })
 
 // TODO print Gary Oldman's cat's name by reading the data in the appropriate array index, using [] notation
@@ -76,7 +76,7 @@ console.log("Gary Oldman's cat is called:", cats_and_owners[1].cat)
 // TODO print Gary Oldman's cat's name by looping over the array until you find the object with name = "Gary Oldman"
 cats_and_owners.forEach(owner => {
     if (owner.name === "Gary Oldman") {
-      console.log("Gary Oldman's cat is called:", owner.cat);
+      console.log("Gary Oldman's cat is called:", owner.cat)
     }
   })
 
@@ -87,12 +87,12 @@ Source http://api.nobelprize.org/v1/prize.json?year=2017
 
 // TODO print the full name of the Literature Nobel laureate.
 let literatureLaureate = nobel_prize_winners_2017.prizes.find(prize => prize.category === "literature").laureates[0];
-console.log('Literature Nobel laureate:', literatureLaureate.firstname, literatureLaureate.surname);
+console.log('Literature Nobel laureate:', literatureLaureate.firstname, literatureLaureate.surname)
 
 // TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
-let physicsLaureates = nobel_prize_winners_2017.prizes.find(prize => prize.category === "physics").laureates;
+let physicsLaureates = nobel_prize_winners_2017.prizes.find(prize => prize.category === "physics").laureates
 physicsLaureates.forEach(laureate => {
-  console.log('Physics laureate ID:', laureate.id);
+  console.log('Physics laureate ID:', laureate.id)
 })
 
 // TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
